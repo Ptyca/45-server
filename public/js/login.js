@@ -48,6 +48,13 @@ function submitFormInfo(e) {
 function responseAction(response) {
     try {
         const responseObject = JSON.parse(response);
+        if (responseObject.error) {
+            localStorage.removeItem('login-token');
+            document.cookie = 'login-token='
+            return showMessage('error', responseObject.error)
+        }
+        document.cookie = 'login-token=' + responseObject.token;
+
         localStorage.setItem('login-token', responseObject.token);
         showMessage('success', 'Token gautas ;)');
     } catch (error) {
