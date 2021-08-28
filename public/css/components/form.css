@@ -67,10 +67,12 @@
   background-color: #fefefe;
   box-shadow: 0 4px 10px #0002;
 }
+
 .form > .form-row {
   display: flex;
   width: 100%;
 }
+
 .form > .form-row > label {
   width: 200px;
   float: left;
@@ -100,17 +102,4 @@
   line-height: 22px;
   font-size: 18px;
   resize: vertical;
-}
-.form > .form-row > button[type='submit'] {
-  padding: 0 20px;
-  line-height: 40px;
-  font-size: 22px;
-  color: #fff;
-  border: 2px solid var(--primary-color);
-  background-color: var(--primary-color);
-  border-radius: 4px;
-  cursor: pointer;
-}
-.form > .form-row > button[type='submit']:hover {
-  background-color: #14d;
 }

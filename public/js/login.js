@@ -38,25 +38,26 @@ function submitFormInfo(e) {
 
     closeMessage();
     ajax({
-        method: 'POST',
+        method: 'POST', // siuntimo budas
         headers: {},
         endpoint: 'api/token',
         data: { email, password: pass }
     }, responseAction);
 }
 
+// gaunam atsaka
 function responseAction(response) {
     try {
         const responseObject = JSON.parse(response);
         if (responseObject.error) {
             localStorage.removeItem('login-token');
-            document.cookie = 'login-token='
-            return showMessage('error', responseObject.error)
+            showMessage('error', responseObject.error);
         }
-        document.cookie = 'login-token=' + responseObject.token;
-
         localStorage.setItem('login-token', responseObject.token);
         showMessage('success', 'Token gautas ;)');
+        setTimeout(() => {
+            location.href = '/admin';
+        }, 2000)
     } catch (error) {
         showMessage('error', 'Serverio klaida!');
     }
