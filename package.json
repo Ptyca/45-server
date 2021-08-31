@@ -1,0 +1,27 @@
+{
+  "name": "45-server",
+  "version": "1.0.0",
+  "description": "28 group project",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "mysql2": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ptyca/45-server.git"
+  },
+  "keywords": [],
+  "author": "Vytautas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ptyca/45-server/issues"
+  },
+  "homepage": "https://github.com/Ptyca/45-server#readme"
+}
